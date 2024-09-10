@@ -1,5 +1,7 @@
 <?php
 
+include_once 'conector/BaseDatos.php';
+
 class Auto {
     private $patente;
     private $marca;
@@ -131,7 +133,7 @@ class Auto {
         $base=new BaseDatos();
         $sql="SELECT * FROM auto";
         if($parametro!=""){
-            $sql.='WHERE '.$parametro;
+            $sql.=' WHERE '.$parametro;
         }
         $res=$base->Ejecutar($sql);
         if($res>-1){

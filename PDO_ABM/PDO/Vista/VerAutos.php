@@ -3,8 +3,10 @@ include_once '../configuracion.php';
 $titulo = "Buscar autos";
 
 $objAuto = new ABM_Auto();
-$param = "";
-$arregloAutos = $objAuto->buscar($param);
+$objPersona = new ABM_Persona();
+$paramAutos = "";
+$arregloAutos = $objAuto->buscar($paramAutos);
+
 ?>
 
 
@@ -13,14 +15,17 @@ $arregloAutos = $objAuto->buscar($param);
         <th>Patente</th>
         <th>Marca</th>
         <th>Modelo</th>
+        <th>Dueño</th>
     </tr>
     <tr>
         <?php
         foreach($arregloAutos as $unAuto) {
+            $duenio = $unAuto->getObjPersona();
             echo "<tr>";
             echo "<td>" . $unAuto->getPatente() . "</td>";
             echo "<td>" . $unAuto->getMarca() . "</td>";
-            echo "<td>" . $unAuto->getPatente() . "</td>";
+            echo "<td>" . $unAuto->getModelo() . "</td>";
+            echo "<td>" . $duenio->getNombre() . " " . $duenio->getApellido(). "</td>";
             echo "</tr>";
         }
         ?>

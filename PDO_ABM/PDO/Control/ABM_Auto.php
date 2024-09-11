@@ -1,5 +1,5 @@
 <?php 
-
+include_once '../Modelo/Auto.php';
 
 class ABM_Auto{
 
@@ -118,7 +118,9 @@ class ABM_Auto{
                 $where.=" and DniDuenio ='".$param['DniDuenio'];
             }      
         }
-        $arreglo = Auto::listar($where);  
+        $auto = new Auto();
+        $arreglo = $auto->listar($where);
+        //$arreglo = Auto::listar($where);  
         return $arreglo;
     }
 }

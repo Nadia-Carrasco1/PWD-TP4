@@ -6,7 +6,7 @@ class Auto {
     private $patente;
     private $marca;
     private $modelo;
-    private $objPersona; 
+    private $objPersona; //Dueño
     private $mensajeOperacion;
 
     public function __construct(){
@@ -70,7 +70,10 @@ class Auto {
             if($rest>-1){
                 if($rest>0){
                     $row=$base->Registro();
-                    $this->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
+                    $objDuenio = new Persona();///////////////////////////////
+                    $objDuenio->setNroDni($row['DniDuenio']);
+                    $objDuenio->cargar();
+                    $this->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio);/////////////////////////////
                     $resp=true;
                 }
             }
@@ -84,7 +87,7 @@ class Auto {
         $resp=false;
         $base= new BaseDatos();
         $sql="INSERT INTO auto (Patente, Marca, Modelo, DniDuenio)
-        VALUES ('".$this->getPatente()."', '".$this->getMarca()."', '".$this->getModelo()."', '".$this->getObjPersona()."')";
+        VALUES ('".$this->getPatente()."', '".$this->getMarca()."', '".$this->getModelo()."', '".$this->getObjPersona()->getNroDni()."')";
         if ($base->Iniciar()){
             if($elid = $base->Ejecutar($sql)){
                 $this->setPatente($elid);
@@ -99,7 +102,7 @@ class Auto {
     public function modificar(){
         $resp=false;
         $base=new BaseDatos();
-        $sql="UPDATE auto SET Patente='".$this->getPatente()."', Marca='".$this->getMarca()."', Modelo='".$this->getModelo()."', DniDuenio='".$this->getObjPersona();
+        $sql="UPDATE auto SET Marca='".$this->getMarca()."', Modelo='".$this->getModelo()."', DniDuenio='".$this->getObjPersona()->getNroDni();
         if($base->Iniciar()){
             if($base->Ejecutar($sql)){
                 $resp=true;
@@ -140,7 +143,10 @@ class Auto {
             if($res>0){
                 while($row=$base->Registro()){
                     $obj=new Auto();
-                    $obj->setear($row['Patente'],$row['Marca'],$row['Modelo'],$row['DniDuenio']);
+                    $objDuenio = new Persona();/////////////////////////
+                    $objDuenio->setNroDni($row['DniDuenio']);
+                    $objDuenio->cargar();
+                    $obj->setear($row['Patente'],$row['Marca'],$row['Modelo'],$objDuenio);//////////////////////////
                     array_push($arreglo,$obj);
                 }
             }

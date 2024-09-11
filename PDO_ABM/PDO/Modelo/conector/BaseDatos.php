@@ -174,7 +174,7 @@ class BaseDatos extends PDO {
           $this->setIndice(0);
           $this->setResultado($arregloResult);
        }
-       echo " La cantidad es ".$cant."<br>";
+       //echo " La cantidad es ".$cant."<br>";
        return $cant;
        
    }
@@ -200,8 +200,8 @@ class BaseDatos extends PDO {
            }
           
        } 
-      echo " <br>El valor de fila actual es:<br>";
-      print_r($filaActual);
+      //echo " <br>El valor de fila actual es:<br>";
+      //print_r($filaActual);
        return $filaActual;
    }
    

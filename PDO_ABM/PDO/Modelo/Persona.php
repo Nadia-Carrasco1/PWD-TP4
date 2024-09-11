@@ -160,7 +160,7 @@
                 }
             }
         } else {
-            $this->setmensajeoperacion("Persona->listar: ".$base->getError());
+            $this->setmensajeoperacion("persona->listar: ".$base->getError());
         }
         return $arreglo;
     }

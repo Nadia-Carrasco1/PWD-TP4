@@ -38,7 +38,7 @@ $todasLasPersonas = $objPersona->buscar($paramPersonas);
     </tr>
 </table>
 
-<a href="autosPersona.html">Ver autos</a>
+<a href="autosPersona.php">Ver autos</a>
 
 
 

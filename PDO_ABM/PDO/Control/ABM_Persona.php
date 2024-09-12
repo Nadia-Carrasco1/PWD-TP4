@@ -4,7 +4,7 @@ class ABM_Persona {
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $param
-     * @return Tabla
+     * @return Persona
      */
     private function cargarObjeto($param){
         $obj = null;
@@ -23,7 +23,7 @@ class ABM_Persona {
     private function cargarObjetoConClave($param){
         $obj = null;
         if( isset($param['NroDni']) ){
-            $obj = new Tabla();
+            $obj = new Persona();
             $obj->setear($param['NroDni'], null, null, null, null, null);
         }
         return $obj;
@@ -47,7 +47,7 @@ class ABM_Persona {
      */
     public function alta($param){
         $resp = false;
-        $param['NroDni'] =null;
+        //$param['NroDni'] =null;
         $elObjtPersona = $this->cargarObjeto($param);
         if ($elObjtPersona!=null and $elObjtPersona->insertar()){
             $resp = true;

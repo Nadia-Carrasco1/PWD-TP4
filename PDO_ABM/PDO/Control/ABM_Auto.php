@@ -147,7 +147,7 @@ class ABM_Auto{
                 $where.=" and Modelo ='".$param['Modelo'];
             }
             if(isset($param['DniDuenio'])){
-                $where.=" and DniDuenio ='".$param['DniDuenio'];
+                $where.=" and DniDuenio ='".$param['DniDuenio']."'";
             }      
         }
         $auto = new Auto();

@@ -7,9 +7,9 @@ $tituloPagina="Buscar Auto";
 
 
 
-<form method="post" action="Accion/AccionBuscarAuto.php">
+<form method="post" action="Accion/AccionBuscarAuto.php" enctype="multipart/form-data" id="formBuscarAuto">
     <label>Ingrese su patente: </label><br>
-    <input id="Patente" class="Patente" name="Patente" type="text">
+    <input id="Patente" class="Patente" name="Patente" type="text" required>
     <input type="submit" value="Buscar">
 </form>
 

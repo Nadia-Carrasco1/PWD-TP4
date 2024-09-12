@@ -1,5 +1,4 @@
 <?php 
-include_once '../Modelo/Auto.php';
 
 class ABM_Auto{
 
@@ -97,6 +96,34 @@ class ABM_Auto{
         return $resp;
     }
 
+    public function cambiarDuenio($patente, $nroDni) {
+        $resp = -1;
+        $persona = new ABM_Persona();
+        $persona = $persona->buscar(['NroDni'=>$nroDni]);
+        $auto = $this->buscar(['Patente'=>$patente]);
+
+        if (!empty($persona && !empty($auto))) {
+            $persona = $persona[0];
+            $auto = $auto[0];
+            $dniDiferente = $persona->getNroDni() != $auto->getObjPersona()->getNroDni() ? true : false;
+            if ($dniDiferente) {
+                $auto->setObjPersona($persona);
+                if ($auto->modificar()) {
+                    $resp = 0;
+                }
+            } else {
+                $resp = 1;
+            }
+        } elseif (empty($persona) && empty($auto)) {
+            $resp = 2;
+        } elseif (empty($persona)) {
+            $resp = 3;
+        } else {
+            $resp = 4;
+        }
+        return $resp;
+    }
+
     /**
      * permite buscar un objeto
      * @param array $param
@@ -106,7 +133,7 @@ class ABM_Auto{
         $where = " true ";
         if ($param!=NULL){
             if(isset($param['Patente'])){
-                $where.=" and Patente =".$param['Patente'];
+                $where.=" and Patente ='".$param['Patente']."'";
             }    
             if(isset($param['Marca'])){
                 $where.=" and Marca =".$param['Marca'];

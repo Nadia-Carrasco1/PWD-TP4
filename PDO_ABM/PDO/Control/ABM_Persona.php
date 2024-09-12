@@ -97,7 +97,7 @@ class ABM_Persona {
         $where = " true ";
         if ($param!=NULL){
             if  (isset($param['NroDni']))
-                $where.=" and NroDni =".$param['NroDni'];
+                $where.=" and NroDni ='".$param['NroDni']."'";
             if  (isset($param['Apellido']))
                  $where.=" and Apellido ='".$param['Apellido']."'";
             if  (isset($param['Nombre']))

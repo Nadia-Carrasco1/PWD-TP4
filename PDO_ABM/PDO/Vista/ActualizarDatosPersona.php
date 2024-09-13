@@ -3,20 +3,19 @@ include_once '../configuracion.php';
 $titulo="Actualizar datos persona";
 
 $datosForm = data_submitted();
-//var_dump($datosForm);
-$objAbmPersona = new ABM_Persona();
-$objPersona = new Persona();
 
+$objAbmPersona = new ABM_Persona();
 $persona = $objAbmPersona->buscar(['NroDni'=>$datosForm['NroDni']]); 
 $persona = $persona[0];
-//$persona = (array)$persona;
 
-var_dump($persona);
-var_dump($datosForm);
-
+$respuesta = "No se ingresaron datos para actualizar";
 if ($objAbmPersona->modificacion($datosForm)) {
-    echo "modificado";
-} else {
-    echo "no modificado";
-}
+    $respuesta = "Las datos fueron actualizados correctamente";
+} 
 ?>
+
+<div>
+    <?php
+    echo $respuesta;
+    ?>
+</div>

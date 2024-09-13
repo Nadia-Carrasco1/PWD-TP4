@@ -10,7 +10,7 @@ $objAbmAuto = new ABM_Auto();
 $duenio = $objAbmPersona->buscar(['NroDni'=>$datosForm['NroDni']]);
 $duenio = $duenio[0];
 $autosDuenio = $objAbmAuto->buscar(['DniDuenio'=>$datosForm['NroDni']]);
-$tieneAutos = count($autosDuenio) > 0 ? true : false;
+$tieneAutos = !empty($autosDuenio) ? true : false;
 ?>
 
 <?php

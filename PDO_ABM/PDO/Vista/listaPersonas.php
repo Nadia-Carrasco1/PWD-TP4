@@ -1,9 +1,4 @@
 <?php
-/*Ejercicio 3 – Crear una página "listaPersonas.php" que muestre un listado con las personas que se
- encuentran cargadas y un link a otra página “autosPersona.php” que recibe un dni de una persona y muestra
- los datos de la persona y un listado de los autos que tiene asociados. Recordar usar la capa de control antes
- generada, no se puede acceder directamente a las clases del ORM.*/
-
 include_once '../configuracion.php';
 $titulo = "Lista personas";
 

@@ -1,0 +1,19 @@
+<!--
+Ejercicio 7 – Crear una página “BuscarPersona.html” que contenga un formulario que permita cargar un
+ numero de documento de una persona. Estos datos serán enviados a una página “accionBuscarPersona.php”
+ busque los datos de la persona cuyo documento sea el ingresado en el formulario los muestre en un nuevo
+ formulario; a su vez este nuevo formulario deberá permitir modificar los datos mostrados (excepto el nro de
+ documento) y estos serán enviados a otra página “ActualizarDatosPersona.php” que actualiza los datos de la
+ persona. Utilizar css y validaciones javaScript cuando crea conveniente. Recordar usar la capa de control
+ antes generada, no se puede acceder directamente a las clases del ORM.-->
+
+ <div>
+    <div>
+        <form name="formBuscarPersona" id="formBuscarPersona" method="post" action="Accion/AccionBuscarPersona.php" enctype="multipart/form-data">
+            <label for="NroDni">DNI</label>
+            <input type="number" name="NroDni" id="NroDni" required><br><br>
+
+            <input type="submit" value="Aceptar">
+        </form>
+    </div>
+</div>

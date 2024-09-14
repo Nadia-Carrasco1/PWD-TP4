@@ -1,6 +1,6 @@
 <?php
-
 $titulo="Nuevo Auto";
+include_once 'Estructura/Header.php';
 ?>
 
 <div>
@@ -25,3 +25,8 @@ $titulo="Nuevo Auto";
     </div>    
 
 </div>
+
+<?php 
+$src="Estructura/JS/nuevoAuto.js";
+include_once 'Estructura/footer.php';
+?>

@@ -144,6 +144,7 @@ class BaseDatos extends PDO {
     * 
     */
    private function EjecutarDeleteUpdate($sql){
+    echo $sql;
        $cantFilas =-1;
        $resultado=parent::query($sql);
        if(!$resultado){

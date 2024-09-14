@@ -5,7 +5,7 @@ $titulo = "Ver autos";
 $objAbmAuto = new ABM_Auto();
 $paramAutos = "";
 $arregloAutos = $objAbmAuto->buscar($paramAutos);
-$hayAutos = count($arregloAutos) > 0 ? true : false;
+$hayAutos = !empty($arregloAutos) ? true : false;
 ?>
 
 <?php

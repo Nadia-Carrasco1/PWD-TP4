@@ -52,12 +52,12 @@ $('#formPersona').validate({
         fechaNac: {
             required: "Por favor, ingrese su fecha de nacimiento"
         },
-        //falta chequear que el numero de telefono tenga el formato correcto (299-5632417)
+        
         Telefono: {
             formatoTelefonoValido: "Formato de teléfono: código de área-5632419",
             maxlength: "Formato de teléfono: código de área-5632419",
             minlength: "Formato de teléfono: código de área-5632419",
-            required: "Por favor, ingrese su número de teléfono"
+            required: "Por favor, ingrese su número de teléfono" 
         },
         Domicilio: {
             debeContenerAltura: "Por favor, ingrese la altura",

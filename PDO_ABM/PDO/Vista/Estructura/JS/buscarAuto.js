@@ -1,37 +1,27 @@
 $("#formBuscarAuto").validate({
     rules:{
-        Patente:{
+        Patente: {
             minlength: 7,
-            maxlength: 10,
+            maxlength: 7,
+            formatoPatenteValido: true,
             required: true
         }
     },
     messages: {
         Patente: {
-            required: "Dato requerido",
-            minlength: "Ingrese al menos 7 dígitos",
-            maxlength: "Ingrese hasta 10 dígitos"
+            formatoPatenteValido: "Formato de patente: DKR (mayúsculas) 675",
+            minlength: "Formato de patente: DKR 675",
+            maxlength: "Formato de patente: DKR 675",
+            required: "Por favor, ingrese la patente"
         }
     }  
 });
 
-$(document).ready(function() {
-    $("#formAccionBuscarAuto").validate({
-        rules: {
-            Marca: {
-                required: true
-            },
-            Modelo: {
-                required: true
-            }
-        },
-        messages: {
-            Marca: {
-                required: "Dato requerido"
-            },
-            Modelo: {
-                required: "Dato requerido"
-            }
-        }
-    });
-});
+
+$.validator.addMethod("formatoPatenteValido", function(valor) {
+    return /^[A-Z]{3} \d{3}$/.test(valor);
+}, "Formato de patente válido");
+
+
+
+

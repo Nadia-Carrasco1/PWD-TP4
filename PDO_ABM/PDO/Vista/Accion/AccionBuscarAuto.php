@@ -1,7 +1,7 @@
 <?php
 include_once '../../configuracion.php';
 $titulo="Buscar Auto";
-include_once ( '../Estructura/Header.php');
+//include_once ( '../Estructura/Header.php');
 $datosForm = data_submitted();
 $patente = $datosForm['Patente'];
 $objAbmAuto = new ABM_Auto();
@@ -13,6 +13,7 @@ if (!empty($datosAuto)) {
     if (isset($datosForm['Marca']) && isset($datosForm['Modelo'])) {
         // Verificar si la marca y el modelo coinciden
         if ($auto->getMarca() == $datosForm['Marca'] && $auto->getModelo() == $datosForm['Modelo']) {
+            
             echo "<h2>Datos del Auto</h2>";
             echo "<table border='1'>
                     <tr>
@@ -32,6 +33,7 @@ if (!empty($datosAuto)) {
         }
     } else {
         // Mostrar formulario para ingresar marca y modelo
+        
         echo "<h3>Ingrese la Marca y el Modelo del Auto</h3>";
         echo "<form method='POST' action='' id='formAccionBuscarAuto'>
                 <input type='hidden' name='Patente' value='{$patente}'>

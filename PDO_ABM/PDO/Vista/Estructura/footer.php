@@ -1,4 +1,4 @@
-<div  style="background-color:powderblue;" class="dentro" id="dentro">
+<div  style="background-color:#212529;color:white;" class="dentro" id="dentro">
     <footer class="pie">
         <script src="Estructura/JS/jquery-3.7.1.min.js"></script>
         <script src="Estructura/JS/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>

@@ -1,9 +1,9 @@
 <?php
 include_once '../../configuracion.php';
-
+$titulo="Buscar Auto";
+include_once ( '../Estructura/Header.php');
 $datosForm = data_submitted();
 $patente = $datosForm['Patente'];
-
 $objAbmAuto = new ABM_Auto();
 $datosAuto = $objAbmAuto->buscar(['Patente' => $patente]);
 
@@ -33,7 +33,7 @@ if (!empty($datosAuto)) {
     } else {
         // Mostrar formulario para ingresar marca y modelo
         echo "<h3>Ingrese la Marca y el Modelo del Auto</h3>";
-        echo "<form method='POST' action=''>
+        echo "<form method='POST' action='' id='formAccionBuscarAuto'>
                 <input type='hidden' name='Patente' value='{$patente}'>
                 <label for='Marca'>Marca:</label>
                 <input type='text' id='Marca' name='Marca' required>
@@ -45,7 +45,12 @@ if (!empty($datosAuto)) {
 } else {
     echo "No se encontró ningún auto con la patente ingresada.";
 }
+echo "<br><a href='../BuscarAuto.php'>Volver</a>";
+
+include_once '../Estructura/footer.php';
+$src= "../Estructura/JS/buscarAuto.js";
+//echo "<script src='$src'></script>";
+
 ?>
 
-<br>
-<a href="../BuscarAuto.php">Volver</a>
+

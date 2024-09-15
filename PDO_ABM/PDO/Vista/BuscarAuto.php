@@ -9,11 +9,11 @@ include_once ( 'Estructura/Header.php');
             <h3>Buscar Auto</h3>
         </div>
         <div class="d-flex justify-content-center">
-            <form method="post" action="Accion/AccionBuscarAuto.php" enctype="multipart/form-data" id="formBuscarAuto" class="needs-validation" novalidate> 
+            <form method="post" action="Accion/AccionBuscarAuto.php" enctype="multipart/form-data" id="formBuscarAuto" name="formBuscarAuto" class="needs-validation" novalidate> 
                 <label for ="Patente" class="form-label text-muted">Ingrese su patente: </label><br>
-                <input id="Patente" class="Patente" name="Patente"  placeholder="DKR 675" type="text" class="form-control" required><br><br>
+                <input id="Patente" name="Patente"  placeholder="DKR 675" type="text" class="form-control" required><br>
                 <div class="d-flex justify-content-center">
-                    <input type="submit" value="Buscar" class="btn btn-success col-md-3">
+                    <input type="submit" value="Buscar" class="btn btn-success col-md-5">
                 </div><br>
             </form>
         </div>

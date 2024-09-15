@@ -23,5 +23,24 @@ $.validator.addMethod("formatoPatenteValido", function(valor) {
 }, "Formato de patente válido");
 
 
+$("#formAccionBuscarAuto").validate({
+    rules: {
+        Marca: {
+            required: true
+        },
+        Modelo: {
+            required: true
+        }
+    },
+    messages: {
+        Marca: {
+            required: "Dato requerido"
+        },
+        Modelo: {
+            required: "Dato requerido"
+        }
+    }
+});
+
 
 

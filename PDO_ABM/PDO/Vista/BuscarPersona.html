@@ -9,18 +9,53 @@
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <form name="formBuscarPersona" id="formBuscarPersona" method="post" action="Accion/AccionBuscarPersona.php"
-                enctype="multipart/form-data" class="needs-validation" novalidate>
-                <label class="form-label" for="NroDni">DNI</label>
-                <input type="number" name="NroDni" id="NroDni" class="form-control" required><br><br>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <!---->
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-5">
+            <br>
+            <div class="d-flex justify-content-center">
+                <h3>Buscar persona</h3>
+            </div>
+            <div>
+                <form name="formBuscarPersona" id="formBuscarPersona" method="post" action="Accion/AccionBuscarPersona.php"
+                    enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <label class="form-label text-muted" for="NroDni">DNI</label>
+                    <input type="number" name="NroDni" id="NroDni" class="form-control" required><br><br>
 
-                <input type="submit" value="Aceptar" class="btn">
-            </form>
+                    <div class="d-flex justify-content-center">
+                        <input type="submit" value="Aceptar" class="btn btn-success col-md-3">
+                    </div>
+                    <br>
+                </form>
+            </div>
         </div>
     </div>
-    <div class="dentro" id="dentro">
+    <!---->
+    <div class="dentro" id="dentro" style="background-color:#212529;color:white;">
         <footer class="pie">
             <script src="Estructura/JS/jquery-3.7.1.min.js"></script>
             <script src="Estructura/JS/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>

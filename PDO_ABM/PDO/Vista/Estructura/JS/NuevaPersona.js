@@ -28,6 +28,7 @@ $('#formPersona').validate({
         },
         Domicilio: {
             debeContenerAltura: true,
+            debeContenerCalle: true,
             required: true
         },
     },
@@ -61,6 +62,7 @@ $('#formPersona').validate({
         },
         Domicilio: {
             debeContenerAltura: "Por favor, ingrese la altura",
+            debeContenerCalle: "Por favor, ingrese la calle",
             required: "Por favor, ingrese su domicilio"
         }
     }
@@ -80,4 +82,8 @@ $.validator.addMethod("formatoTelefonoValido", function(valor) {
 
 $.validator.addMethod("debeContenerAltura", function (valor) {
     return /(?=.*\d)/.test(valor);
-}, )
+}, "Debe contener altura");
+
+$.validator.addMethod("debeContenerCalle", function (valor) {
+    return /^\s*[a-zA-Z]+(?:\s+\d+)?\s*$/.test($.trim(valor));
+}, "Debe contener calle");

@@ -1,4 +1,5 @@
 <?php
+$link = "";
 $titulo = "Ingresar DNI";
 include_once 'Estructura/Header.php';
 ?>

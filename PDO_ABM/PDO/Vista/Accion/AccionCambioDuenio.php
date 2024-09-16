@@ -7,12 +7,11 @@ $objAbmPersona = new ABM_Persona();
 $objAbmAuto = new ABM_Auto();
 
 $respuesta = $objAbmAuto->cambiarDuenio($datosForm['Patente'], $datosForm['NroDni']);
-?>
 
-<?php
 $link = ".";
 include_once "../Estructura/Header.php";
 ?>
+
 <div>
     <?php
     $icono = "<i class='bi bi-exclamation-triangle-fill'></i>";
@@ -52,7 +51,7 @@ include_once "../Estructura/Header.php";
         <div class='d-flex justify-content-center''>
             <a href='../CambioDuenio.php' class='btn btn-success col-md-2'>Volver</a>
         </div>
-    </div>
+    </div><br>
     ";
     ?>
 </div>

@@ -1,39 +1,70 @@
 <?php
 include_once '../configuracion.php';
+$link = "";
 $titulo = "Lista personas";
+include_once 'Estructura/Header.php';
 
 $objPersona = new ABM_Persona();
 $paramPersonas = "";
 $todasLasPersonas = $objPersona->buscar($paramPersonas);
 
+if (!empty($todasLasPersonas)) {
+    echo "
+    <div class='container d-flex justify-content-center'>
+        <div  class='col-md-11'><br>
+            <div class='d-flex justify-content-center'>
+                <h3>Todas las personas</h3>
+            </div>
+            <div class='d-flex justify-content-center'>
+                <table border='1' class='table table-sm text-center table-bordered'>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Teléfono</th>
+                        <th>Domicilio</th>
+                    </tr>
+                    <tr>";
+
+                        foreach($todasLasPersonas as $unaPersona) {
+                            echo "<tr class='table-active text-black'>";
+                            echo    "<td class='bg-success'>" . $unaPersona->getNroDni();
+                            echo    "<td class='table-success'>" . $unaPersona->getApellido();
+                            echo    "<td class='table-success'>" . $unaPersona->getNombre();
+                            echo    "<td class='table-success'>" . $unaPersona->getFechaNac();
+                            echo    "<td class='table-success'>" . $unaPersona->getTelefono();
+                            echo    "<td>" . $unaPersona->getDomicilio();
+                            echo "</tr>";
+                        }
+                    
+                echo "</tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class='d-flex justify-content-center''>
+        <a href='autosPersona.php' class='btn btn-success col-md-2'>Ver autos</a>
+    </div><br>";
+} else {
+    echo "<br>
+    <div class='container col-md-6'>
+        <div class='d-flex justify-content-center'>
+            <div class='alert alert-success'>
+                <div>
+                No hay personas cargadas en la base de datos
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='d-flex justify-content-center''>
+        <a href='NuevaPersona.php' class='btn btn-success col-md-2'>Ingresar una persona</a>
+    </div><br>
+    ";
+}
+
+include_once 'Estructura/footer.php';
 ?>
-
-<table border="1">
-    <tr>
-        <th>DNI</th>
-        <th>Apellido</th>
-        <th>Nombre</th>
-        <th>Fecha de nacimiento</th>
-        <th>Teléfono</th>
-        <th>Domicilio</th>
-    </tr>
-    <tr>
-        <?php
-        foreach($todasLasPersonas as $unaPersona) {
-            echo "<tr>";
-            echo "<td>" . $unaPersona->getNroDni();
-            echo "<td>" . $unaPersona->getApellido();
-            echo "<td>" . $unaPersona->getNombre();
-            echo "<td>" . $unaPersona->getFechaNac();
-            echo "<td>" . $unaPersona->getTelefono();
-            echo "<td>" . $unaPersona->getDomicilio();
-            echo "</tr>";
-        }
-        ?>
-    </tr>
-</table>
-
-<a href="autosPersona.php">Ver autos</a>
 
 
 

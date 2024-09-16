@@ -1,4 +1,5 @@
 <?php
+$link = "";
 $titulo = "Nueva persona";
 include_once 'Estructura/Header.php';
 ?>

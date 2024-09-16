@@ -49,7 +49,7 @@ include_once "../Estructura/Header.php";
             </div>
         </div>
     </div>
-        <div class='d-flex justify-content-center' action=''>
+        <div class='d-flex justify-content-center''>
             <a href='../CambioDuenio.php' class='btn btn-success col-md-2'>Volver</a>
         </div>
     </div>

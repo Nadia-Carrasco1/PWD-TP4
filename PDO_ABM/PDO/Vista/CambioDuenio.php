@@ -1,4 +1,5 @@
 <?php
+$link = "";
 $titulo = "Cambio de dueño";
 include_once 'Estructura/Header.php';
  ?>

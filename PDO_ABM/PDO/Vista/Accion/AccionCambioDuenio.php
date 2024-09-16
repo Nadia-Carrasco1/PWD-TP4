@@ -9,6 +9,10 @@ $objAbmAuto = new ABM_Auto();
 $respuesta = $objAbmAuto->cambiarDuenio($datosForm['Patente'], $datosForm['NroDni']);
 ?>
 
+<?php
+$link = ".";
+include_once "../Estructura/Header.php";
+?>
 <div>
     <?php
     switch ($respuesta) {
@@ -32,3 +36,6 @@ $respuesta = $objAbmAuto->cambiarDuenio($datosForm['Patente'], $datosForm['NroDn
     }
     ?>
 </div>
+<?php
+include_once "../Estructura/footer.php";
+?>

@@ -17,6 +17,7 @@ if (count($personaExiste) == 0) {
         $alert = "success";
     } else {
         $respuesta = "La persona no pudo se ingresada a la base de datos";
+        $alert = "danger";
     }
 } else {
     $respuesta = "La persona ya se encuentra en la base de datos";
@@ -26,6 +27,7 @@ if (count($personaExiste) == 0) {
 
 <?php
 $link = ".";
+$linkMenu = "../../";
 include_once "../Estructura/Header.php";
 ?>
 <div>
@@ -43,7 +45,7 @@ include_once "../Estructura/Header.php";
         <div class='d-flex justify-content-center'>
             <a href='../NuevaPersona.php' class='btn btn-success col-md-2'>Volver</a>
         </div>
-    </div>
+    </div><br>
     ";
     ?>
 </div>

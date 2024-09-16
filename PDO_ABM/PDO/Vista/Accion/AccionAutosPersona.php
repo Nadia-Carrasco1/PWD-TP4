@@ -1,6 +1,7 @@
 <?php
 include_once '../../configuracion.php';
 $link = ".";
+$linkMenu = "../../";
 $titulo = "Lista autos";
 include_once '../Estructura/Header.php';
 
@@ -86,7 +87,7 @@ if (!empty($duenio)) {
                   </div>
               </div>
               <div class='d-flex justify-content-center''>
-                <a href='../listaPersonas.php' class='btn btn-success col-md-2'>Ingresar auto</a>
+                <a href='../NuevoAuto.php' class='btn btn-success col-md-2'>Ingresar auto</a>
               </div><br>";
     }
 } else {

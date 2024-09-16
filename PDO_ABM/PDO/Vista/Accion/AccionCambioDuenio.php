@@ -9,6 +9,7 @@ $objAbmAuto = new ABM_Auto();
 $respuesta = $objAbmAuto->cambiarDuenio($datosForm['Patente'], $datosForm['NroDni']);
 
 $link = ".";
+$linkMenu = "../../";
 include_once "../Estructura/Header.php";
 ?>
 

@@ -32,7 +32,9 @@ if($personaExiste!=null){
     $respuesta="Debe registrarse antes de ingresar un nuevo auto"."<div class='d-flex justify-content-center'><a style='text-decoration: none; color: rgb(171,44,56); padding-left:2%; padding-right:2%; border:1px solid; border-radius:10px; background-color:#fff2f2;' href='../NuevaPersona.php'>Registrarse</a></div>";
     
 }
+
 $link = ".";
+$linkMenu = "../../";
 include_once "../Estructura/Header.php";
 
 echo " <br> <div class='container d-flex justify-content-center'>

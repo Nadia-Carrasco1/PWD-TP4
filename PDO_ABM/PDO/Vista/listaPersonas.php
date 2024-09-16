@@ -1,6 +1,7 @@
 <?php
 include_once '../configuracion.php';
 $link = "";
+$linkMenu = "../";
 $titulo = "Lista personas";
 include_once 'Estructura/Header.php';
 
@@ -11,7 +12,7 @@ $todasLasPersonas = $objPersona->buscar($paramPersonas);
 if (!empty($todasLasPersonas)) {
     echo "
     <div class='container d-flex justify-content-center'>
-        <div  class='col-md-11'><br>
+        <div  class='col-md-10'><br>
             <div class='d-flex justify-content-center'>
                 <h3>Todas las personas</h3>
             </div>

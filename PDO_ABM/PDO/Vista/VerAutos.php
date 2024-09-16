@@ -1,6 +1,7 @@
 <?php
 include_once '../configuracion.php';
 $link = "";
+$linkMenu = "../";
 $titulo = "Ver autos";
 include_once 'Estructura/Header.php';
 

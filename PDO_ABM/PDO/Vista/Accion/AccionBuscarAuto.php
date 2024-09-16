@@ -1,13 +1,15 @@
 <?php
 include_once '../../configuracion.php';
 $titulo="Buscar Auto";
+$link = ".";
+$linkMenu = "../../";
+include_once "../Estructura/Header.php";
 
 $datosForm = data_submitted();
 $patente = $datosForm['Patente'];
 $objAbmAuto = new ABM_Auto();
 $datosAuto = $objAbmAuto->buscar(['Patente' => $patente]);
-$link = ".";
-include_once "../Estructura/Header.php";
+
 $icono = "<i class='bi bi-exclamation-triangle-fill'></i>";
 $alert = "danger";
 if (!empty($datosAuto)) {
@@ -39,7 +41,7 @@ if (!empty($datosAuto)) {
                             $icono=null;
                             $alert=null;
         } else {
-            $respuesta= "La marca o el modelo no coinciden con los datos del auto.";
+            $respuesta= "La marca o el modelo no coinciden con los datos del auto";
         }
     } else {
         // Mostrar formulario para ingresar marca y modelo
@@ -55,8 +57,8 @@ if (!empty($datosAuto)) {
                         <input type='text' class='form-control' id='Marca' name='Marca' required><br>
                         <label for='Modelo' id='Modelo' class='form-label text-muted'>Modelo:</label>
                         <input type='number' class='form-control' id='Modelo' name='Modelo' required><br>
-                       <div class='d-flex justify-content-center'>
-                            <input type='submit' value='Buscar' class='btn btn-success col-md-5'>
+                        <div class='d-flex justify-content-center'>
+                             <input type='submit' value='Buscar' class='btn btn-success col-md-5'>
                         </div>
                     </form>
                 </div>";
@@ -66,7 +68,7 @@ if (!empty($datosAuto)) {
 
     }
 } else {
-    $respuesta= "No se encontró ningún auto con la patente ingresada.";
+    $respuesta= "No se encontró ningún auto con la patente ingresada";
 }
 $src= "../Estructura/JS/buscarAuto.js";
 

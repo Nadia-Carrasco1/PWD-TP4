@@ -1,5 +1,6 @@
 <?php
 $link = "";
+$linkMenu = "../";
 $titulo="Buscar Auto";
 
 include_once ( 'Estructura/Header.php');

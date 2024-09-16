@@ -1,5 +1,6 @@
 <?php
 $link = "";
+$linkMenu = "../";
 $titulo = "Nueva persona";
 include_once 'Estructura/Header.php';
 ?>
@@ -31,7 +32,7 @@ include_once 'Estructura/Header.php';
                 <input type="text" name="Domicilio" id="Domicilio" class="form-control" required><br><br>
 
                 <div class="d-flex justify-content-center">
-                    <input type="submit" value="Aceptar" class="btn btn-success col-md-3">
+                    <input type="submit" value="Aceptar" class="btn btn-success col-md-5">
                 </div>
                 <br>
             </form>

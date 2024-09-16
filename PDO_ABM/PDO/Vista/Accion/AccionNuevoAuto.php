@@ -29,9 +29,20 @@ if($personaExiste!=null){
     $respuesta="Debe registrarse antes de ingresar un nuevo auto <br>"."<a href='../NuevaPersona.php'>Registrarse</a><br>";
     
 }
+$link = ".";
+include_once "../Estructura/Header.php";
 
+echo "<div class='container d-flex justify-content-center'>
+
+
+    {$respuesta}
+    <a href='../NuevoAuto.php'>Volver</a>
+   
+    
+    
+</div> ";
+
+include_once '../Estructura/footer.php';
 ?>
-<div>
-    <?php echo $respuesta; ?><br>
-    <a href="../NuevoAuto.php">Volver</a>
-</div>
+ 
+

@@ -7,10 +7,15 @@ $("#formAuto").validate({
             required: true
         },
         Marca:{
-            required: true
+            required: true,
+            marcaValida:true,
+            maxlength:15
+            
         },
         Modelo:{
-            required: true
+            required: true,
+            modeloValido:true,
+            maxlength:4
         },
         DniDuenio:{
             number: true,
@@ -29,9 +34,12 @@ $("#formAuto").validate({
         },
         Marca:{
             required: "Dato requerido",
+            maxlength:"Ha superado la cantidad máxima de carácteres"
         },
         Modelo:{
             required: "Dato requerido",
+            modeloValido:"Solo se aceptan números positivos",
+            maxlength:"Ingresar hasta 4 dígitos"
         },
         DniDuenio:{
             number: "Por favor, ingrese un número válido",
@@ -46,3 +54,11 @@ $("#formAuto").validate({
 $.validator.addMethod("formatoPatenteValido", function(valor) {
     return /^[A-Z]{3} \d{3}$/.test(valor);
 }, "Formato de patente válido");
+
+$.validator.addMethod("marcaValida", function (valor) {
+    return /^[a-zA-Z0-9\s]+$/.test(valor) && !/^\d+$/.test(valor);
+}, "Por favor, ingrese letras, números y espacios (no se permiten solo números)");
+
+$.validator.addMethod("modeloValido", function (valor) {
+    return !isNaN(valor) && Number(valor) > 0;
+}, "Por favor, ingrese un número positivo.");

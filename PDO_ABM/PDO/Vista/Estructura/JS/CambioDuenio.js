@@ -34,3 +34,4 @@ $("#formCambioDuenio").validate({
 $.validator.addMethod("formatoPatenteValido", function(valor) {
     return /^[A-Z]{3} \d{3}$/.test(valor);
 }, "Formato de patente válido");
+

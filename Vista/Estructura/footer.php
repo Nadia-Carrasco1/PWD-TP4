@@ -11,15 +11,15 @@
             <div class="footerInfo">
                 <h6>Programaci&oacute;n Web Din&aacute;mica - GRUPO 23</h6>
                 <ul style="list-style-type: none;padding: 0px; margin: 0px;">
-                    <li>Tecnicatura Universitaria en Desarrollo Web</li>
-                    <li>PWD, 2° cuatrimestre 2024</li>
+                    <li class="text-muted">Tecnicatura Universitaria en Desarrollo Web</li>
+                    <li class="text-muted">PWD, 2° cuatrimestre 2024</li>
                 </ul>
             </div>
             <div class="footerInfo">
-                <h6>Integrantes:</h6>
+                <h6>Integrantes</h6>
                 <ul>
-                    <li>Scalia Lucia FAI-4235</li>
-                    <li>Carrasco Nadia FAI-4236</li>
+                    <li class="text-muted">Scalia Lucia FAI-4235</li>
+                    <li class="text-muted">Carrasco Nadia FAI-4236</li>
                 </ul>
             </div>
         </div>

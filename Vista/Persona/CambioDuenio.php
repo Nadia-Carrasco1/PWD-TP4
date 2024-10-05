@@ -2,7 +2,7 @@
 $link = "";
 $linkMenu = "../";
 $titulo = "Cambio de dueño";
-include_once 'Estructura/Header.php';
+include_once '../Estructura/Header.php';
  ?>
 
 <div class="container d-flex justify-content-center">
@@ -28,6 +28,6 @@ include_once 'Estructura/Header.php';
 </div>
 
 <?php
-$src = "Estructura/JS/CambioDuenio.js";
-include_once 'Estructura/footer.php';
+$src = "../JS/CambioDuenio.js";
+include_once '../Estructura/footer.php';
 ?>

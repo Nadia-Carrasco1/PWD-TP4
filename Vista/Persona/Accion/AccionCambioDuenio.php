@@ -1,5 +1,5 @@
 <?php
-include_once '../../configuracion.php';
+include_once '../../../configuracion.php';
 $titulo = "Cambio de dueño";
 
 $datosForm = data_submitted(); 
@@ -8,9 +8,9 @@ $objAbmAuto = new ABM_Auto();
 
 $respuesta = $objAbmAuto->cambiarDuenio($datosForm['Patente'], $datosForm['NroDni']);
 
-$link = ".";
+$link = "../";
 $linkMenu = "../../";
-include_once "../Estructura/Header.php";
+include_once "../../Estructura/Header.php";
 ?>
 
 <div>
@@ -57,5 +57,5 @@ include_once "../Estructura/Header.php";
     ?>
 </div>
 <?php
-include_once "../Estructura/footer.php";
+include_once "../../Estructura/footer.php";
 ?>

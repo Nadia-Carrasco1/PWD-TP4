@@ -1,9 +1,9 @@
 <?php
-include_once '../configuracion.php';
+include_once '../../configuracion.php';
 $link = "";
 $linkMenu = "../";
 $titulo = "Lista personas";
-include_once 'Estructura/Header.php';
+include_once '../Estructura/Header.php';
 
 $objPersona = new ABM_Persona();
 $paramPersonas = "";
@@ -64,7 +64,7 @@ if (!empty($todasLasPersonas)) {
     ";
 }
 
-include_once 'Estructura/footer.php';
+include_once '../Estructura/footer.php';
 ?>
 
 

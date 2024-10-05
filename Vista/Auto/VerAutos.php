@@ -1,9 +1,9 @@
 <?php
-include_once '../configuracion.php';
+include_once '../../configuracion.php';
 $link = "";
 $linkMenu = "../";
 $titulo = "Ver autos";
-include_once 'Estructura/Header.php';
+include_once '../Estructura/Header.php';
 
 $objAbmAuto = new ABM_Auto();
 $paramAutos = "";
@@ -61,5 +61,5 @@ echo "<div class='d-flex justify-content-center''>
         <a href='NuevoAuto.php' class='btn btn-success col-md-2'>Ingresar un auto</a>
       </div><br>";
 
-include_once 'Estructura/footer.php';
+include_once '../Estructura/footer.php';
 ?>

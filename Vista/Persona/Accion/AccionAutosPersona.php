@@ -1,9 +1,9 @@
 <?php
-include_once '../../configuracion.php';
-$link = ".";
+include_once '../../../configuracion.php';
+$link = "../";
 $linkMenu = "../../";
 $titulo = "Lista autos";
-include_once '../Estructura/Header.php';
+include_once '../../Estructura/Header.php';
 
 $datosForm = data_submitted();
 $objAbmPersona = new ABM_Persona();
@@ -106,5 +106,5 @@ if (!empty($duenio)) {
             </div><br>";
 }
 
-include_once "../Estructura/footer.php";
+include_once "../../Estructura/footer.php";
 ?>

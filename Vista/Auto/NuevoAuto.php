@@ -2,7 +2,7 @@
 $link = "";
 $linkMenu = "../";
 $titulo="Nuevo Auto";
-include_once 'Estructura/Header.php';
+include_once '../Estructura/Header.php';
 ?>
 
 <div class="container d-flex justify-content-center">
@@ -34,6 +34,6 @@ include_once 'Estructura/Header.php';
 </div>
 
 <?php 
-$src="Estructura/JS/nuevoAuto.js";
-include_once 'Estructura/footer.php';
+$src="../JS/nuevoAuto.js";
+include_once '../Estructura/footer.php';
 ?>

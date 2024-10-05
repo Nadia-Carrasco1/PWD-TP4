@@ -3,7 +3,7 @@ $link = "";
 $linkMenu = "../";
 $titulo="Buscar Auto";
 
-include_once ( 'Estructura/Header.php');
+include_once ( '../Estructura/Header.php');
 
 ?>
 <div class="container d-flex justify-content-center">
@@ -23,6 +23,6 @@ include_once ( 'Estructura/Header.php');
     </div>
 </div>
 
-<?php $src= "Estructura/JS/buscarAuto.js";
-include_once 'Estructura/footer.php';
+<?php $src= "../JS/buscarAuto.js";
+include_once '../Estructura/footer.php';
 ?>

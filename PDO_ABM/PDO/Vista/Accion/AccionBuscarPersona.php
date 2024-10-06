@@ -1,9 +1,9 @@
 <?php 
-include_once '../../../configuracion.php';
+include_once '../../configuracion.php';
 $titulo="Buscar persona";
-$link = "../";
+$link = ".";
 $linkMenu = "../../";
-include_once '../../Estructura/Header.php';
+include_once '../Estructura/Header.php';
 
 $datosFrom = data_submitted();
 $objAbmPersona = new ABM_Persona();
@@ -67,6 +67,6 @@ if (!empty($persona)) {
          </div><br>";
 }
 
-$src = "../../JS/NuevaPersona.js";
-include_once '../../Estructura/footer.php';
+$src = "../Estructura/JS/NuevaPersona.js";
+include_once '../Estructura/footer.php';
 ?>

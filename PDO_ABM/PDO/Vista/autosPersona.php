@@ -2,7 +2,7 @@
 $link = "";
 $linkMenu = "../";
 $titulo = "Ingresar DNI";
-include_once '../Estructura/Header.php';
+include_once 'Estructura/Header.php';
 ?>
 
 <div class="container d-flex justify-content-center">
@@ -26,6 +26,6 @@ include_once '../Estructura/Header.php';
 </div>
 
 <?php
-$src = "../JS/autosPersona.js";
-include_once '../Estructura/footer.php';
+$src = "Estructura/JS/autosPersona.js";
+include_once 'Estructura/footer.php';
 ?>

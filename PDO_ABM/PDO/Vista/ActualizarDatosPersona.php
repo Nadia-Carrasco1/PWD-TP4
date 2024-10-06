@@ -1,9 +1,9 @@
 <?php 
-include_once '../../configuracion.php';
+include_once '../configuracion.php';
 $titulo="Actualizar datos persona";
 $link = "";
 $linkMenu = "../";
-include_once '../Estructura/Header.php';
+include_once 'Estructura/Header.php';
 
 $datosForm = data_submitted();
 $objAbmPersona = new ABM_Persona();
@@ -34,5 +34,5 @@ echo "<br>
     <a href='BuscarPersona.php' class='btn btn-success col-md-1'>Volver</a>
 </div><br>";
 
-include_once '../Estructura/footer.php';
+include_once 'Estructura/footer.php';
 ?>

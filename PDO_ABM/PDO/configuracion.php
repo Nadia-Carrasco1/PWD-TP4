@@ -5,12 +5,12 @@ header ("Cache-Control: no-cache, must-revalidate ");
 // CONFIGURACION APP//
 /////////////////////////////
 
-$PROYECTO ='PWD-MVC-Investigacion';
+$PROYECTO ='PWD-TP4/PDO_ABM/PDO';
 
 //variable que almacena el directorio del proyecto
 $ROOT =$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";
 
-include_once($ROOT.'Utiles/funciones.php');
+include_once($ROOT.'util/funciones.php');
 
 
 // Variable que define la pagina de autenticacion del proyecto

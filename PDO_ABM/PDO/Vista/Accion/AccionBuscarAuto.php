@@ -1,9 +1,9 @@
 <?php
-include_once '../../../configuracion.php';
+include_once '../../configuracion.php';
 $titulo="Buscar Auto";
-$link = "../";
+$link = ".";
 $linkMenu = "../../";
-include_once "../../Estructura/Header.php";
+include_once "../Estructura/Header.php";
 
 $datosForm = data_submitted();
 $patente = $datosForm['Patente'];
@@ -70,7 +70,7 @@ if (!empty($datosAuto)) {
 } else {
     $respuesta= "No se encontró ningún auto con la patente ingresada";
 }
-$src= "../../Estructura/JS/buscarAuto.js";
+$src= "../Estructura/JS/buscarAuto.js";
 
 echo "<br>
 <div class='container col-md-6'>
@@ -87,7 +87,7 @@ echo "<br>
     <a href='../BuscarAuto.php' class='btn btn-success col-md-1'>Volver</a>
 </div><br>";
 
-include_once '../../Estructura/footer.php';
+include_once '../Estructura/footer.php';
 
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-include_once '../../../configuracion.php';
+include_once '../../configuracion.php';
 $titulo = "Nueva persona";
 
 $datosForm = data_submitted();
@@ -26,9 +26,9 @@ if (count($personaExiste) == 0) {
 ?>
 
 <?php
-$link = "../";
+$link = ".";
 $linkMenu = "../../";
-include_once "../../Estructura/Header.php";
+include_once "../Estructura/Header.php";
 ?>
 <div>
     <?php
@@ -50,5 +50,5 @@ include_once "../../Estructura/Header.php";
     ?>
 </div>
 <?php
-include_once "../../Estructura/footer.php";
+include_once "../Estructura/footer.php";
 ?>

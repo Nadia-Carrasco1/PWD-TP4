@@ -23,7 +23,7 @@ include_once '../Estructura/Header.php';
                 <input type="number" name="Modelo" id="Modelo" class="form-control" required><br>
 
                 <label for="DniDuenio" class="form-label text-muted">DNI del titular</label>
-                <input type="number" name="DniDuenio" id="DniDuenio" class="form-control" required><br><br>
+                <input type="number" name="DniDuenio" id="DniDuenio" class="form-control" required><br>
                 <div class="d-flex justify-content-center">
                     <input type="submit" value="Aceptar" class="btn btn-success col-md-5">
                 </div>

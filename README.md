@@ -19,3 +19,4 @@ Grupo N°23:
   GitHub: Nadia-Carrasco1
 * Scalia Lucia (FAI-4235)
   GitHub: LuciaScalia
+AVISO: accidentalmente se modificaron todos los archivos y se tuvo que volver a la versión anterior (no se hicieron cambios del tp entregado)
